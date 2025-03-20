@@ -188,7 +188,7 @@ li{
     z-index: 1000; /* Ensure it is above other content */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add a shadow for better visibility */
     border-radius: 10px; /* Rounded corners */
-    padding: 10px 20px; /* Padding inside the header */
+    padding: 10px 20px; /* Add padding on both sides */
 }
 
 #sticky-header nav ul {
@@ -261,6 +261,7 @@ li{
     display: none;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 #hamburger-button {
@@ -269,6 +270,10 @@ li{
     color: white;
     font-size: 1.5em;
     cursor: pointer;
+    position: absolute;
+    left: 20px; /* Align to the left with padding */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
 }
 
 #dropdown-menu {
@@ -345,7 +350,7 @@ li{
 
     #sticky-header {
         width: 100%; /* Full width for mobile */
-        padding: 10px; /* Adjust padding */
+        padding: 10px 20px; /* Adjust padding */
     }
 
     .initials-box a {
