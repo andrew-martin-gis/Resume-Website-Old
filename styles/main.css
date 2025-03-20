@@ -19,6 +19,7 @@
     --mainBorderColor:var(--mainBorderColor-dark);
     --mainBgColor:var(--mainBgColor-dark);
 
+    --stickyHeaderHeight: 60px;
 }
 
 
@@ -191,6 +192,8 @@ li{
     border-radius: 10px; /* Rounded corners */
     padding: 10px 20px; /* Padding inside the header */
     height: 60px; /* Set height to match desktop view */
+    display: flex;
+    align-items: center; /* Center content vertically */
 }
 
 #sticky-header nav ul {
@@ -200,6 +203,7 @@ li{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 
 #sticky-header nav ul li {
@@ -226,6 +230,7 @@ li{
     box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Add shadow to the box */
     font-size: 1.2em; /* Increase font size */
     letter-spacing: 0.1em; /* Increase letter spacing */
+    text-align: center;
 }
 
 .social-button {
@@ -355,7 +360,7 @@ li{
 
     #sticky-header {
         width: 100%; /* Full width for mobile */
-        padding: 10px 20px; /* Adjust padding on both sides */
+        padding: 5px 5px; /* Adjust padding on both sides */
         height: 60px; /* Set height to match desktop view */
     }
 
@@ -381,9 +386,9 @@ li{
         border: none;
         color: white;
         cursor: pointer;
-        padding: 10px;
+        padding: 5px;
         position: absolute;
-        left: 10px; /* Adjust distance from the left edge */
+        left: 5px; /* Adjust distance from the left edge */
         top: 50%;
         transform: translateY(-50%); /* Center vertically */
     }
