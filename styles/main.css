@@ -19,6 +19,7 @@
     --mainBorderColor:var(--mainBorderColor-dark);
     --mainBgColor:var(--mainBgColor-dark);
 
+    --stickyHeaderHeight: 60px;
 }
 
 
@@ -91,9 +92,9 @@ li{
 
 #socials--list{
     display: flex;
-    flex-direction: column; /* Change to column direction */
-    row-gap: 1em; /* Add gap between buttons */
-    width: 100%; /* Full width */
+    justify-content: space-between;
+    column-gap: 1em;
+    flex-wrap: wrap;
 }
 
 #socials--list a{
@@ -103,6 +104,7 @@ li{
     transition: 0.3s;
     width: 100%; /* Full width */
     text-align: center; /* Center text */
+    margin-bottom: 10px; /* Add margin for spacing between buttons */
 }
 
 #socials--list a:hover{
@@ -189,6 +191,9 @@ li{
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add a shadow for better visibility */
     border-radius: 10px; /* Rounded corners */
     padding: 10px 20px; /* Padding inside the header */
+    height: 60px; /* Set height to match desktop view */
+    display: flex;
+    align-items: center; /* Center content vertically */
 }
 
 #sticky-header nav ul {
@@ -198,6 +203,7 @@ li{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 
 #sticky-header nav ul li {
@@ -224,6 +230,7 @@ li{
     box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Add shadow to the box */
     font-size: 1.2em; /* Increase font size */
     letter-spacing: 0.1em; /* Increase letter spacing */
+    text-align: center;
 }
 
 .social-button {
@@ -251,6 +258,60 @@ li{
     height: 80px; /* Adjust this value to match the height of the sticky header */
     margin-top: -80px; /* Adjust this value to match the height of the sticky header */
     visibility: hidden;
+}
+
+.desktop-menu {
+    display: flex;
+}
+
+.mobile-menu {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#hamburger-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    position: absolute;
+    left: 20px; /* Align to the left with padding */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+}
+
+#dropdown-menu {
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#dropdown-menu a {
+    color: white;
+    padding: 10px;
+    text-align: left; /* Align text to the left */
+    text-decoration: none;
+}
+
+#dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+}
+
+.dropdown-hidden {
+    display: none;
+}
+
+.dropdown-visible {
+    display: flex;
 }
 
 @media(max-width:600px){
@@ -283,5 +344,75 @@ li{
     .card--education{
         border-left: none;
         padding-left: 0;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px; /* Set height to match desktop view */
+    }
+
+    #sticky-header {
+        width: 100%; /* Full width for mobile */
+        padding: 5px 5px; /* Adjust padding on both sides */
+        height: 60px; /* Set height to match desktop view */
+    }
+
+    #sticky-header nav ul {
+        display: none; /* Hide section names in the header on mobile view */
+    }
+
+    .initials-box {
+        margin-left: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%; /* Center vertically */
+        transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    }
+
+    .mobile-menu .initials-box {
+        display: block; /* Ensure initials box is visible */
+    }
+
+    #hamburger-button {
+        font-size: 1.5em;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 5px;
+        position: absolute;
+        left: 5px; /* Adjust distance from the left edge */
+        top: 50%;
+        transform: translateY(-50%); /* Center vertically */
+    }
+
+    #dropdown-menu {
+        display: none; /* Hide dropdown menu by default */
+        flex-direction: column;
+        background-color: rgba(76, 76, 76, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    #dropdown-menu a {
+        padding: 10px;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+    }
+
+    #dropdown-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: black;
     }
 }
