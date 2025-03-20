@@ -103,6 +103,7 @@ li{
     transition: 0.3s;
     width: 100%; /* Full width */
     text-align: center; /* Center text */
+    margin-bottom: 10px; /* Add margin for spacing between buttons */
 }
 
 #socials--list a:hover{
@@ -350,22 +351,22 @@ li{
 
     #sticky-header {
         width: 100%; /* Full width for mobile */
-        padding: 10px 20px; /* Adjust padding */
-    }
-
-    .initials-box a {
-        margin: 0 auto; /* Center initials */
+        padding: 10px 20px; /* Adjust padding on both sides */
     }
 
     #sticky-header nav ul {
         display: none; /* Hide section names in the header on mobile view */
     }
 
-    .mobile-menu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
+    .initials-box {
+        margin-left: auto;
+        position: relative;
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Center vertically */
+    }
+
+    .mobile-menu .initials-box {
+        display: none; /* Remove the extra initials box */
     }
 
     #hamburger-button {
