@@ -190,6 +190,7 @@ li{
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add a shadow for better visibility */
     border-radius: 10px; /* Rounded corners */
     padding: 10px 20px; /* Padding inside the header */
+    height: 60px; /* Set height to match desktop view */
 }
 
 #sticky-header nav ul {
@@ -347,11 +348,15 @@ li{
     .mobile-menu {
         display: flex;
         width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px; /* Set height to match desktop view */
     }
 
     #sticky-header {
         width: 100%; /* Full width for mobile */
         padding: 10px 20px; /* Adjust padding on both sides */
+        height: 60px; /* Set height to match desktop view */
     }
 
     #sticky-header nav ul {
@@ -360,13 +365,14 @@ li{
 
     .initials-box {
         margin-left: auto;
-        position: relative;
+        position: absolute;
+        left: 50%;
         top: 50%; /* Center vertically */
-        transform: translateY(-50%); /* Center vertically */
+        transform: translate(-50%, -50%); /* Center both horizontally and vertically */
     }
 
     .mobile-menu .initials-box {
-        display: none; /* Remove the extra initials box */
+        display: block; /* Ensure initials box is visible */
     }
 
     #hamburger-button {
@@ -376,10 +382,10 @@ li{
         color: white;
         cursor: pointer;
         padding: 10px;
-    }
-
-    .initials-box {
-        margin-left: auto;
+        position: absolute;
+        left: 10px; /* Adjust distance from the left edge */
+        top: 50%;
+        transform: translateY(-50%); /* Center vertically */
     }
 
     #dropdown-menu {
