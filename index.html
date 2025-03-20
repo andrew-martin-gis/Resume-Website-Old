@@ -68,43 +68,6 @@
             </section>
 
             <section class="section--page">
-                <div id="wrapper--techstack__items-anchor" class="anchor"></div>
-                <h2>Tech Stack</h2>
-
-                <div id="wrapper--techstack__items">
-                    <div class="card--techstack"><span>Python</span></div>
-                    <div class="card--techstack"><span>ArcPy</span></div>
-                    <div class="card--techstack"><span>Unix</span></div>
-                    <div class="card--techstack"><span>SQL</span></div>
-                    <div class="card--techstack"><span>XML</span></div>
-                    <div class="card--techstack"><span>JSON</span></div>
-                    <div class="card--techstack"><span>R</span></div>
-                </div>
-            </section>
-
-            <section class="section--page">
-                <div id="wrapper--software__items-anchor" class="anchor"></div>
-                <h2>Software</h2>
-
-                <div id="wrapper--software__items">
-                    <div class="card--software"><span>ArcGIS Pro</span></div>
-                    <div class="card--software"><span>ArcMap</span></div>
-                    <div class="card--software"><span>ArcGIS Web AppBuilder</span></div>
-                    <div class="card--software"><span>ArcGIS StoryMaps</span></div>
-                    <div class="card--software"><span>ArcGIS Survey123</span></div>
-                    <div class="card--software"><span>JOSM</span></div>
-                    <div class="card--software"><span>R Studio</span></div>
-                    <div class="card--software"><span>IBM SPSS</span></div>
-                    <div class="card--software"><span>Visual Studio Code</span></div>
-                    <div class="card--software"><span>Jira</span></div>
-                    <div class="card--software"><span>Confluence</span></div>
-                    <div class="card--software"><span>Bitbucket</span></div>
-                    <div class="card--software"><span>GitHub</span></div>
-                    <div class="card--software"><span>Microsoft Office Suite</span></div>
-                </div>
-            </section>
-
-            <section class="section--page">
                 <div id="education-wrapper-anchor" class="anchor"></div>
                 <h2>Education</h2>
                 <div class="line-break"></div>
@@ -148,24 +111,69 @@
             <section class="section--page">
                 <div id="academic--research-anchor" class="anchor"></div>
                 <h2>Portfolio</h2>
-                
-                <h3>Research</h3>
                 <div class="card--project">
                     <a href="project1.html"><span>🎓 </span>A Hydroclimatological Analysis of Severe Flood Events: A Case Study of Whitesburg, KY</a>
                 </div>
+            </section>
 
-                <h3>Code</h3>
+            <section class="section--page">
+                <div id="wrapper--techstack__items-anchor" class="anchor"></div>
+                <h2>Tech Stack</h2>
+
+                <div id="wrapper--techstack__items">
+                    <div class="card--techstack"><span>Python</span></div>
+                    <div class="card--techstack"><span>ArcPy</span></div>
+                    <div class="card--techstack"><span>Unix</span></div>
+                    <div class="card--techstack"><span>SQL</span></div>
+                    <div class="card--techstack"><span>XML</span></div>
+                    <div class="card--techstack"><span>JSON</span></div>
+                    <div class="card--techstack"><span>R</span></div>
+                </div>
+            </section>
+
+            <section class="section--page">
+                <div id="wrapper--software__items-anchor" class="anchor"></div>
+                <h2>Software</h2>
+
+                <div id="wrapper--software__items">
+                    <div class="card--software"><span>ArcGIS Pro</span></div>
+                    <div class="card--software"><span>ArcMap</span></div>
+                    <div class="card--software"><span>ArcGIS Web AppBuilder</span></div>
+                    <div class="card--software"><span>ArcGIS StoryMaps</span></div>
+                    <div class="card--software"><span>ArcGIS Survey123</span></div>
+                    <div class="card--software"><span>JOSM</span></div>
+                    <div class="card--software"><span>R Studio</span></div>
+                    <div class="card--software"><span>IBM SPSS</span></div>
+                    <div class="card--software"><span>Visual Studio Code</span></div>
+                    <div class="card--software"><span>Jira</span></div>
+                    <div class="card--software"><span>Confluence</span></div>
+                    <div class="card--software"><span>Bitbucket</span></div>
+                    <div class="card--software"><span>GitHub</span></div>
+                    <div class="card--software"><span>Microsoft Office Suite</span></div>
+                </div>
+            </section>
+
+            <section id="development--projects" class="section--page">
+                <div id="development--projects-anchor" class="anchor"></div>
+                <h2>Development Projects</h2>
+
                 <div class="card--project">
                     <a href="project2.html"><span>💻 </span>JOSM Grid Creation Automation Python Script</a>
                 </div>
+            </section>
 
-                <h3>Cartography</h3>
+            <section id="cartography--portfolio" class="section--page">
+                <div id="cartography--portfolio-anchor" class="anchor"></div>
+                <h2>Cartography Portfolio</h2>
+
                 <div class="card--project">
                     <a href="project3.html"><span>🗺️ </span>Poverty Inequality of Kentucky Census Tracts 2020 (WebMap)</a>
                 </div>
+
                 <div class="card--project">
                     <a href="project4.html"><span>🗺️ </span>Clay City Flood Map</a>
                 </div>
+
                 <div class="card--project">
                     <a href="project5.html"><span>🗺️ </span>Shifting Kentucky Away From Coal To Sustainable Energy (StoryMap)</a>
                 </div>
@@ -175,21 +183,17 @@
 
         <script>
             document.getElementById('hamburger-button').addEventListener('click', function() {
-                var dropdown = document.getElementById('dropdown-menu');
-                if (dropdown.classList.contains('dropdown-hidden')) {
-                    dropdown.classList.remove('dropdown-hidden');
-                    dropdown.classList.add('dropdown-visible');
+                var dropdownMenu = document.getElementById('dropdown-menu');
+                if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+                    dropdownMenu.style.display = 'flex';
                 } else {
-                    dropdown.classList.remove('dropdown-visible');
-                    dropdown.classList.add('dropdown-hidden');
+                    dropdownMenu.style.display = 'none';
                 }
             });
 
             document.querySelectorAll('#dropdown-menu a').forEach(function(link) {
                 link.addEventListener('click', function() {
-                    var dropdown = document.getElementById('dropdown-menu');
-                    dropdown.classList.remove('dropdown-visible');
-                    dropdown.classList.add('dropdown-hidden');
+                    document.getElementById('dropdown-menu').style.display = 'none';
                 });
             });
         </script>

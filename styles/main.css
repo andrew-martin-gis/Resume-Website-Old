@@ -91,9 +91,9 @@ li{
 
 #socials--list{
     display: flex;
-    flex-direction: column; /* Change to column direction */
-    row-gap: 1em; /* Add gap between buttons */
-    width: 100%; /* Full width */
+    justify-content: space-between;
+    column-gap: 1em;
+    flex-wrap: wrap;
 }
 
 #socials--list a{
@@ -188,7 +188,7 @@ li{
     z-index: 1000; /* Ensure it is above other content */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add a shadow for better visibility */
     border-radius: 10px; /* Rounded corners */
-    padding: 10px 20px; /* Add padding on both sides */
+    padding: 10px 20px; /* Padding inside the header */
 }
 
 #sticky-header nav ul {
@@ -355,5 +355,52 @@ li{
 
     .initials-box a {
         margin: 0 auto; /* Center initials */
+    }
+
+    #sticky-header nav ul {
+        display: none; /* Hide section names in the header on mobile view */
+    }
+
+    .mobile-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    #hamburger-button {
+        font-size: 1.5em;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .initials-box {
+        margin-left: auto;
+    }
+
+    #dropdown-menu {
+        display: none; /* Hide dropdown menu by default */
+        flex-direction: column;
+        background-color: rgba(76, 76, 76, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    #dropdown-menu a {
+        padding: 10px;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+    }
+
+    #dropdown-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: black;
     }
 }
