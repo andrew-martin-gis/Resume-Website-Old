@@ -13,13 +13,23 @@
         <div id="top" class="anchor"></div> <!-- Anchor at the top of the page -->
         <header id="sticky-header">
             <nav>
-                <ul>
+                <ul class="desktop-menu">
                     <li><a href="#qualifications--list-anchor">Skills</a></li>
                     <li><a href="#education-wrapper-anchor">Education</a></li>
                     <li class="initials-box"><a href="#top">AM</a></li> <!-- Updated href to #top -->
                     <li><a href="#work-history-wrapper-anchor">Experience</a></li>
                     <li><a href="#academic--research-anchor">Portfolio</a></li>
                 </ul>
+                <div class="mobile-menu">
+                    <button id="hamburger-button">☰</button>
+                    <div id="dropdown-menu" class="dropdown-hidden">
+                        <a href="#qualifications--list-anchor">Skills</a>
+                        <a href="#education-wrapper-anchor">Education</a>
+                        <a href="#work-history-wrapper-anchor">Experience</a>
+                        <a href="#academic--research-anchor">Portfolio</a>
+                    </div>
+                    <div class="initials-box"><a href="#top">AM</a></div>
+                </div>
             </nav>
         </header>
         <div id="container--main">
@@ -162,5 +172,18 @@
             </section>
 
         </div>
+
+        <script>
+            document.getElementById('hamburger-button').addEventListener('click', function() {
+                var dropdown = document.getElementById('dropdown-menu');
+                if (dropdown.classList.contains('dropdown-hidden')) {
+                    dropdown.classList.remove('dropdown-hidden');
+                    dropdown.classList.add('dropdown-visible');
+                } else {
+                    dropdown.classList.remove('dropdown-visible');
+                    dropdown.classList.add('dropdown-hidden');
+                }
+            });
+        </script>
     </body>
 </html>

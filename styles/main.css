@@ -253,6 +253,55 @@ li{
     visibility: hidden;
 }
 
+.desktop-menu {
+    display: flex;
+}
+
+.mobile-menu {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#hamburger-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#dropdown-menu {
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#dropdown-menu a {
+    color: white;
+    padding: 10px;
+    text-align: left; /* Align text to the left */
+    text-decoration: none;
+}
+
+#dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+}
+
+.dropdown-hidden {
+    display: none;
+}
+
+.dropdown-visible {
+    display: flex;
+}
+
 @media(max-width:600px){
 
     .section--page{
@@ -283,5 +332,23 @@ li{
     .card--education{
         border-left: none;
         padding-left: 0;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+        width: 100%;
+    }
+
+    #sticky-header {
+        width: 100%; /* Full width for mobile */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .initials-box a {
+        margin: 0 auto; /* Center initials */
     }
 }
