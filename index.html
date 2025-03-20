@@ -10,9 +10,22 @@
     </head>
     
     <body>
+        <div id="top" class="anchor"></div> <!-- Anchor at the top of the page -->
+        <header id="sticky-header">
+            <nav>
+                <ul>
+                    <li><a href="#qualifications--list-anchor">Skills</a></li>
+                    <li><a href="#education-wrapper-anchor">Education</a></li>
+                    <li class="initials-box"><a href="#top">AM</a></li> <!-- Updated href to #top -->
+                    <li><a href="#work-history-wrapper-anchor">Experience</a></li>
+                    <li><a href="#academic--research-anchor">Portfolio</a></li>
+                </ul>
+            </nav>
+        </header>
         <div id="container--main">
 
             <section id="wrapper--hero" class="section--page">
+                <div id="wrapper--hero-anchor" class="anchor"></div>
                 <img id="profile-pic" src="./assets/images/profile_picture.jpeg">
 
                 <div>
@@ -24,9 +37,10 @@
             </section>
 
             <section class="section--page">
+                <div id="qualifications--list-anchor" class="anchor"></div>
                 <div id="socials--list">
-                    <a href="https://www.linkedin.com/in/andrew-martin-gis/" target="_blank">LinkedIn</a>
-                    <a href="./assets/resume.pdf" target="_blank">Download Resume</a>
+                    <a href="https://www.linkedin.com/in/andrew-martin-gis/" target="_blank" class="social-button">LinkedIn</a>
+                    <a href="./assets/resume.pdf" target="_blank" class="social-button">Download Resume</a>
                 </div>
             </section>
 
@@ -40,11 +54,11 @@
                     <li>✔️ Advanced data modeling and cartographic techniques</li>
                     <li>✔️ Hydrological analysis</li>
                     <li>✔️ Technical Writing</li>
-                    <li>✔️ Experience reading architectural CAD plans</li>
                 </ul>
             </section>
 
             <section class="section--page">
+                <div id="wrapper--techstack__items-anchor" class="anchor"></div>
                 <h2>Tech Stack</h2>
 
                 <div id="wrapper--techstack__items">
@@ -59,6 +73,7 @@
             </section>
 
             <section class="section--page">
+                <div id="wrapper--software__items-anchor" class="anchor"></div>
                 <h2>Software</h2>
 
                 <div id="wrapper--software__items">
@@ -79,9 +94,9 @@
                 </div>
             </section>
 
-            <section id="education-wrapper" class="section--page">
+            <section class="section--page">
+                <div id="education-wrapper-anchor" class="anchor"></div>
                 <h2>Education</h2>
-
                 <div class="line-break"></div>
                 <div class="card--education">
                     <strong>BACHELOR OF SCIENCE: APPLIED GEOGRAPHY | UNIVERSITY OF LOUISVILLE</strong>
@@ -90,9 +105,9 @@
                 </div>
             </section>
 
-            <section id="work-history-wrapper" class="section--page">
-                <h2>Work History</h2>
-
+            <section class="section--page">
+                <div id="work-history-wrapper-anchor" class="anchor"></div>
+                <h2>Experience</h2>
                 <div class="line-break"></div>
                 <div class="card--work-history">
                     <strong>DIGITAL MAP DESIGNER | GOZIO</strong>
@@ -103,17 +118,13 @@
                         <li>Develop mapping solutions to increase efficiency in a fast growing software development company</li>
                     </ul>
                 </div>
-
                 <div class="line-break"></div>
-
                 <div class="card--work-history">
                     <strong>VETERINARY ASSISTANT | VCA SHELDEN ANIMAL HOSPITAL</strong>
                     <p>09/2019 - 07/2022</p>
                     <p>Assisted veterinarian during medical, surgical and diagnostic procedures.</p>
                 </div>
-
                 <div class="line-break"></div>
-
                 <div class="card--work-history">
                     <strong>COMPUTER SALES ASSOCIATE | BEST BUY</strong>
                     <p>11/2017 - 01/2020</p>
@@ -124,45 +135,32 @@
                 </div>
             </section>
 
-            <section id="academic--research" class="section--page">
-                <h2>Academic Research</h2>
-
+            <section class="section--page">
+                <div id="academic--research-anchor" class="anchor"></div>
+                <h2>Portfolio</h2>
+                
+                <h3>Research</h3>
                 <div class="card--project">
                     <a href="project1.html"><span>🎓 </span>A Hydroclimatological Analysis of Severe Flood Events: A Case Study of Whitesburg, KY</a>
                 </div>
 
+                <h3>Code</h3>
+                <div class="card--project">
+                    <a href="project2.html"><span>💻 </span>JOSM Grid Creation Automation Python Script</a>
+                </div>
+
+                <h3>Cartography</h3>
+                <div class="card--project">
+                    <a href="project3.html"><span>🗺️ </span>Poverty Inequality of Kentucky Census Tracts 2020 (WebMap)</a>
+                </div>
+                <div class="card--project">
+                    <a href="project4.html"><span>🗺️ </span>Clay City Flood Map</a>
+                </div>
+                <div class="card--project">
+                    <a href="project5.html"><span>🗺️ </span>Shifting Kentucky Away From Coal To Sustainable Energy (StoryMap)</a>
+                </div>
             </section>
 
-        </section>
-
-        <section id="development--projects" class="section--page">
-            <h2>Development Projects</h2>
-
-            <div class="card--project">
-                <a href="project2.html"><span>💻 </span>JOSM Grid Creation Automation Python Script</script></a>
-            </div>
-
-        </section>
-
-        <section id="cartography--portfolio" class="section--page">
-            <h2>Cartography Portfolio</h2>
-
-            <div class="card--project">
-                <a href="project3.html" ><span>🗺️ </span>Poverty Inequality of Kentucky Census Tracts 2020 (WebMap)</a>
-            </div>
-
-            <div class="card--project">
-                <a href="project4.html" ><span>🗺️ </span>Clay City Flood Map</a>
-            </div>
-
-            <div class="card--project">
-                <a href="project5.html"><span>🗺️ </span>Shifting Kentucky Away From Coal To Sustainable Energy (StoryMap)</a>
-            </div>
-
-        </section>
-
-       
         </div>
-
     </body>
 </html>
