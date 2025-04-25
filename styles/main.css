@@ -19,12 +19,11 @@
     --mainBorderColor:var(--mainBorderColor-dark);
     --mainBgColor:var(--mainBgColor-dark);
 
-    --stickyHeaderHeight: 60px;
 }
 
 
 *{
-    font-family: 'Readex Pro', sans-serif; /* Changed font back to Readex Pro */
+    font-family: 'Readex Pro';
     line-height: 1.5em;
     box-sizing: border-box;
     color: var(--mainTextColor);
@@ -33,9 +32,6 @@
 
 body{
     background-color: var(--mainBgColor);            
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 p, span, li{
@@ -60,7 +56,7 @@ li{
 }
 
 .section--page{
-    padding-top: 20px; /* Reduced padding to remove extra space */
+    padding-top: 1em;
     padding-bottom: 1em;
 }
 
@@ -102,9 +98,6 @@ li{
     color: var(--secondaryTextColor);
     font-size: 0.9em;
     transition: 0.3s;
-    width: 100%; /* Full width */
-    text-align: center; /* Center text */
-    margin-bottom: 10px; /* Add margin for spacing between buttons */
 }
 
 #socials--list a:hover{
@@ -153,6 +146,7 @@ li{
 
 .card--project a{
     color: var(--mainTextColor);
+
     transition: 0.3s;
 }
 
@@ -180,139 +174,6 @@ li{
     height: 1px;
 }
 
-#sticky-header {
-    position: -webkit-sticky; /* For Safari */
-    position: sticky;
-    top: 20px; /* Buffer room from the top */
-    width: calc(100% - 40px); /* Fixed width with some margin */
-    margin: 0 auto; /* Center the header */
-    background-color: rgba(76, 76, 76, 0.153); /* Lighter background color */
-    z-index: 1000; /* Ensure it is above other content */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add a shadow for better visibility */
-    border-radius: 10px; /* Rounded corners */
-    padding: 10px 20px; /* Padding inside the header */
-    height: 60px; /* Set height to match desktop view */
-    display: flex;
-    align-items: center; /* Center content vertically */
-}
-
-#sticky-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-}
-
-#sticky-header nav ul li {
-    display: inline;
-}
-
-#sticky-header nav ul li a {
-    text-decoration: none;
-    color: white; /* Bold white text */
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-#sticky-header nav ul li a:hover {
-    background-color: #e0e0e0; /* Adjust as needed */
-}
-
-#sticky-header nav ul li.initials-box a {
-    background-color: rgba(255, 255, 255, 0.8); /* White background with transparency for initials */
-    color: black; /* Black text color for initials */
-    border-radius: 10px; /* Rounded corners */
-    padding: 10px 20px; /* Padding inside the box */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Add shadow to the box */
-    font-size: 1.2em; /* Increase font size */
-    letter-spacing: 0.1em; /* Increase letter spacing */
-    text-align: center;
-}
-
-.social-button {
-    display: block; /* Make the entire box clickable */
-    background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
-    color: black !important; /* Black text color */
-    border-radius: 10px; /* Rounded corners */
-    padding: 10px 20px; /* Padding inside the button */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Add shadow to the button */
-    text-decoration: none !important; /* Ensure no underline */
-    font-weight: bold;
-    font-size: 1em;
-    letter-spacing: 0.1em;
-    transition: background-color 0.3s, color 0.3s;
-    text-align: center; /* Center the text */
-}
-
-.social-button:hover {
-    background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
-    color: black !important; /* Ensure text color remains black on hover */
-}
-
-.anchor {
-    display: block;
-    height: 80px; /* Adjust this value to match the height of the sticky header */
-    margin-top: -80px; /* Adjust this value to match the height of the sticky header */
-    visibility: hidden;
-}
-
-.desktop-menu {
-    display: flex;
-}
-
-.mobile-menu {
-    display: none;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-#hamburger-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5em;
-    cursor: pointer;
-    position: absolute;
-    left: 20px; /* Align to the left with padding */
-    top: 50%;
-    transform: translateY(-50%); /* Center vertically */
-}
-
-#dropdown-menu {
-    position: absolute;
-    top: 60px; /* Adjust based on header height */
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-#dropdown-menu a {
-    color: white;
-    padding: 10px;
-    text-align: left; /* Align text to the left */
-    text-decoration: none;
-}
-
-#dropdown-menu a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
-}
-
-.dropdown-hidden {
-    display: none;
-}
-
-.dropdown-visible {
-    display: flex;
-}
 
 @media(max-width:600px){
 
@@ -344,75 +205,5 @@ li{
     .card--education{
         border-left: none;
         padding-left: 0;
-    }
-
-    .desktop-menu {
-        display: none;
-    }
-
-    .mobile-menu {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        height: 60px; /* Set height to match desktop view */
-    }
-
-    #sticky-header {
-        width: 100%; /* Full width for mobile */
-        padding: 5px 5px; /* Adjust padding on both sides */
-        height: 60px; /* Set height to match desktop view */
-    }
-
-    #sticky-header nav ul {
-        display: none; /* Hide section names in the header on mobile view */
-    }
-
-    .initials-box {
-        margin-left: auto;
-        position: absolute;
-        left: 50%;
-        top: 50%; /* Center vertically */
-        transform: translate(-50%, -50%); /* Center both horizontally and vertically */
-    }
-
-    .mobile-menu .initials-box {
-        display: block; /* Ensure initials box is visible */
-    }
-
-    #hamburger-button {
-        font-size: 1.5em;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-        padding: 5px;
-        position: absolute;
-        left: 5px; /* Adjust distance from the left edge */
-        top: 50%;
-        transform: translateY(-50%); /* Center vertically */
-    }
-
-    #dropdown-menu {
-        display: none; /* Hide dropdown menu by default */
-        flex-direction: column;
-        background-color: rgba(76, 76, 76, 0.9);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        z-index: 999;
-    }
-
-    #dropdown-menu a {
-        padding: 10px;
-        text-align: center;
-        color: white;
-        text-decoration: none;
-    }
-
-    #dropdown-menu a:hover {
-        background-color: rgba(255, 255, 255, 0.8);
-        color: black;
     }
 }
